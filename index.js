@@ -5,9 +5,12 @@
 
 
 
-record.find(superbowlWin).year;
+
 
 function superbowlWin(game){
-    return game.result === 'W';
+    const result = (game.find(game => game.result === "W"));
+    return !!result ? result.year : undefined;
 }
+
+
 
